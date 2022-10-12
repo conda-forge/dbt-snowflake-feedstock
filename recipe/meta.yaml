@@ -19,12 +19,12 @@ requirements:
     - pip
     - python >=3.7
   run:
-    # Ref: <https://www.marcelotrevisani.com/grayskull>
-    - cryptography >=3.2,<37.0.0
-    - dbt-core >=1.2.0,<1.3  # Changed ==1.1.* to <1.2
+    # via Grayskull
     - python >=3.7
-    - requests <3.0.0
+    - dbt-core >=1.3.0,<1.4.dev0
     - snowflake-connector-python >=2.4.1,<2.8.0
+    - requests <3.0.0
+    - cryptography >=3.2,<37.0.0
 
 test:
   imports:
