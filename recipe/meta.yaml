@@ -22,9 +22,7 @@ requirements:
     # via Grayskull
     - python >=3.7
     - dbt-core >=1.4.0,<1.5.dev0
-    - snowflake-connector-python >=2.4.1,<2.8.2
-    - requests <3.0.0
-    - cryptography >=3.2,<39.0.0
+    - snowflake-connector-python >=3.0,<4.dev0
 
 test:
   imports:
