@@ -1,11 +1,11 @@
-About dbt-snowflake
-===================
+About dbt-snowflake-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dbt-snowflake-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/dbt-labs/dbt-snowflake
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dbt-snowflake-feedstock/blob/main/LICENSE.txt)
 
 Summary: The Snowflake adapter plugin for dbt
 
