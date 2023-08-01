@@ -1,5 +1,5 @@
 {% set name = "dbt-snowflake" %}
-{% set version = "1.5.2" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dbt-snowflake-{{ version }}.tar.gz
-  sha256: 634261bab6fce195568c61ea979f2441c5de34c1384911c145957d341f25f639
+  sha256: 1e710aeafceaa57318dce58789595c813cc1c551f43a0e1ec03d34c6659f504c
 
 build:
   noarch: python
@@ -21,8 +21,9 @@ requirements:
   run:
     # via Grayskull
     - python >=3.8
-    - dbt-core >=1.5.0,<1.6.dev0
+    - dbt-core >=1.6.0,<1.7.dev0
     - snowflake-connector-python >=3.0,<4.dev0
+    - agate
 
 test:
   imports:
