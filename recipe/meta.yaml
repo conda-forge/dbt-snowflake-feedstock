@@ -20,10 +20,10 @@ requirements:
     - python >=3.8
   run:
     # via Grayskull
-    - agate
     - python >=3.8
     - dbt-core >=1.6.0,<1.7.dev0
     - snowflake-connector-python >=3.0,<4.dev0
+    - agate
 
 test:
   imports:
