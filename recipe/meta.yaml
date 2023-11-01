@@ -1,5 +1,5 @@
 {% set name = "dbt-snowflake" %}
-{% set version = "1.6.4" %}
+{% set version = "1.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dbt-snowflake-{{ version }}.tar.gz
-  sha256: 0989f1ed17a6163537b86ba9ed9c0c0499acbc8593c052478eb4e0dac5811b4c
+  sha256: 423477fe8b95885c97dba69baafd8610fa0e080833d73b5ead25d3fbbcabb421
 
 build:
   noarch: python
