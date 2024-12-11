@@ -28,6 +28,9 @@ requirements:
     - snowflake-connector-python >=3.0,<4.dev0
     - agate
 
+    # From snowflake-connector-python[secure-local-storage]~=3.0
+    - keyring >=23.1.0,<26.0.0
+
 test:
   imports:
     - dbt.adapters.snowflake
