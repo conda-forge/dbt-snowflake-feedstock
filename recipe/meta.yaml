@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 9fe2fd1b7b65bdb31588c77398c1e8fe6ab77dd5395ba7dcf096fe3c9b3cc3cf
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
     # via Grayskull
     - dbt-adapters >=1.1.1,<2.0
     - dbt-common >=1.0.4,<2.0
-    - python >=3.8
+    - python >={{ python_min }}
     - dbt-core >=1.8.0
     - snowflake-connector-python >=3.0,<4.dev0
     - agate
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/dbt-labs/dbt-snowflake
