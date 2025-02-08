@@ -1,5 +1,5 @@
 {% set name = "dbt-snowflake" %}
-{% set version = "1.8.4" %}
+{% set version = "1.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9fe2fd1b7b65bdb31588c77398c1e8fe6ab77dd5395ba7dcf096fe3c9b3cc3cf
+  sha256: b41a10868ba81d105304b71b45f09a10cdc166ec20088031efb5190542297272
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,8 +21,8 @@ requirements:
     - setuptools
   run:
     # via Grayskull
-    - dbt-adapters >=1.1.1,<2.0
-    - dbt-common >=1.0.4,<2.0
+    - dbt-adapters >=1.10.4,<2.0
+    - dbt-common >=1.10,<2.0
     - python >={{ python_min }}
     - dbt-core >=1.8.0
     - snowflake-connector-python >=3.0,<4.dev0
