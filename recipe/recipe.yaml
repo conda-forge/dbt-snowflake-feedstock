@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dbt-snowflake
-  version: "1.11.4"
+  version: "1.11.5"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: d7dc6987f6c720fefcf3a53ef3e4d29f6edd21c092404e16bb83bcb6230c41ff
+  sha256: 08b47fe7bb9504b1d5d2e1d1f082e07d6fd4c29174b4bf483e1f6d3087a43147
 
 build:
   number: 0
