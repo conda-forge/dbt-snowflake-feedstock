@@ -13,7 +13,7 @@ source:
   sha256: e78d14f2f874924b0fe417bfbce0cad59dc9910a487811692795927ce140e503
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -35,7 +35,9 @@ tests:
       imports:
         - dbt.adapters.snowflake
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: The Snowflake adapter plugin for dbt
