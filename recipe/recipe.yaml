@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dbt-snowflake
-  version: 1.12.4
+  version: 1.12.5
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 83efb205b84ed0f9ddc9e6a78f5aa7205f1ffb4b23dfbf36d55dacf31478ff9e
+  sha256: 62c9ba4ae8e9dd879c3c1a642709dc215ae2a644bdedf52edf39250a6761dc8d
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - python >=${{ python_min }}
     - dbt-common >=1.10,<2.0
     - dbt-adapters >=1.24.4,<2.0
-    - snowflake-connector-python >=4.2.0,<5.0.0
+    - snowflake-connector-python >=4.2.0,<6.0.0
     - certifi >=2026.10.19
     - dbt-core >=1.10.0rc0,<2.0
     - agate
